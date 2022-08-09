@@ -74,7 +74,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }} # Если ваш ssh-ключ защищён фразой-паролем
           script: |
             # Выполняет pull образа с DockerHub
-            sudo docker pull mamrenkodev/infra_project:latest
+            sudo docker pull mamrenkodev/infra_project
             #остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 mamrenkodev/infra_project:latest
+            sudo docker run --rm -d -p 5000:5000 mamrenkodev/infra_project
